@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="tr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>NexPanel - Sorgu Paneli</title>
+    <link rel="stylesheet" href="/static/style.css" />
+  </head>
+  <body>
+    <div class="app-shell">
+      <header class="hero">
+        <div>
+          <p class="eyebrow">Termux için hazırlanmış</p>
+          <h1>NexPanel</h1>
+          <p class="subtitle">MEB, harita ve belge sorgularını tek panelden yönet.</p>
+        </div>
+        <div class="status-pill" id="status-pill">Hazır</div>
+      </header>
+
+      <main class="grid">
+        <section class="card">
+          <div class="card-header">
+            <h2>MEB Öğrenci Notları</h2>
+            <span>servisler.meb.gov.tr</span>
+          </div>
+          <form id="grade-form" class="panel-form">
+            <label>
+              T.C. Kimlik No
+              <input id="tc" name="tc" placeholder="11 haneli T.C. kimlik no" required />
+            </label>
+            <button type="submit">Sorgula</button>
+          </form>
+          <pre id="grade-result" class="result-box">Sonuç burada görüntülenecek.</pre>
+        </section>
+
+        <section class="card">
+          <div class="card-header">
+            <h2>MEB E-Okul Bağlantısı</h2>
+            <span>e-okul.meb.gov.tr</span>
+          </div>
+          <form id="eokul-form" class="panel-form">
+            <label>
+              Öğrenci No
+              <input id="ogrenciId" name="ogrenciId" placeholder="Öğrenci numarası" />
+            </label>
+            <label>
+              Okul Kodu
+              <input id="okulKodu" name="okulKodu" placeholder="Okul kodu" />
+            </label>
+            <label>
+              E-okul login URL
+              <input id="eokulUrl" name="eokulUrl" value="https://e-okul.meb.gov.tr/logineokul.aspx" />
+            </label>
+            <button type="submit">ASP.NET akışını incele</button>
+          </form>
+          <pre id="eokul-result" class="result-box">Sonuç burada görüntülenecek.</pre>
+        </section>
+
+        <section class="card">
+          <div class="card-header">
+            <h2>Harita Servisi</h2>
+            <span>atlas.harita.gov.tr</span>
+          </div>
+          <form id="harita-form" class="panel-form">
+            <label>
+              Arama değeri
+              <input id="haritaQuery" name="haritaQuery" placeholder="İsteğe bağlı" />
+            </label>
+            <button type="submit">İste</button>
+          </form>
+          <pre id="harita-result" class="result-box">Sonuç burada görüntülenecek.</pre>
+        </section>
+
+        <section class="card">
+          <div class="card-header">
+            <h2>Belsis Sorgu</h2>
+            <span>belsis.store</span>
+          </div>
+          <form id="belsis-form" class="panel-form">
+            <label>
+              Sorgu türü
+              <select id="belsisType" name="belsisType">
+                <option value="adsoyad">Ad Soyad</option>
+                <option value="vesika">Vesika</option>
+                <option value="tapu">Tapu</option>
+                <option value="sokak">Sokak</option>
+              </select>
+            </label>
+            <label>
+              Değer
+              <input id="belsisValue" name="belsisValue" placeholder="Sorgu metni" required />
+            </label>
+            <button type="submit">Sorgula</button>
+          </form>
+          <pre id="belsis-result" class="result-box">Sonuç burada görüntülenecek.</pre>
+        </section>
+
+        <section class="card">
+          <div class="card-header">
+            <h2>Türkiye.gov.tr Adli Sicil Kaydı</h2>
+            <span>turkiye.gov.tr</span>
+          </div>
+          <form id="adli-sicil-form" class="panel-form">
+            <label>
+              Hedef URL
+              <input id="adliSicilUrl" name="adliSicilUrl" value="https://www.turkiye.gov.tr/adli-sicil-kaydi" />
+            </label>
+            <button type="submit">Sayfayı incele</button>
+          </form>
+          <pre id="adli-sicil-result" class="result-box">Sonuç burada görüntülenecek.</pre>
+        </section>
+      </main>
+    </div>
+
+    <script src="/static/app.js"></script>
+  </body>
+</html>
