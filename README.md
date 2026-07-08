@@ -45,12 +45,36 @@ python3 app.py
 
 - Terminalde Ctrl + C basın.
 
-## Termux için tam örnek
+## GitHub'dan kurulum (Tam adım adım)
+
+Eğer projeyi GitHub'dan indirdiyseniz, Termux'ta şu şekilde kurabilirsiniz:
+
+```bash
 pkg update && pkg upgrade
-pkg install python
-mkdir -p ~/NexPanel
-cd ~/NexPanel
+pkg install git python
+cd ~
+git clone https://github.com/<kullanici-adiniz>/NexPanel.git
+cd NexPanel
 python3 app.py
+```
+
+### Eğer repo zaten yüklü ise
+
+```bash
+cd ~/NexPanel
+git pull
+python3 app.py
+```
+
+### Tarayıcıda açma
+
+```text
+http://127.0.0.1:8000
+```
+
+### Durdurma
+
+- Terminalde Ctrl + C basın.
 
 ## Özellikler
 
