@@ -76,6 +76,22 @@ http://127.0.0.1:8000
 
 - Terminalde Ctrl + C basın.
 
+## Yapı ve Mimari
+
+Proje temel olarak şu bileşenlerden oluşur:
+
+- app.py: Ana sunucu ve proxy katmanı
+- templates/index.html: Ana arayüz
+- static/style.css: Stil dosyası
+- static/app.js: Frontend mantığı
+- tests/: Otomatik testler
+
+## Geliştirme Notları
+
+- Uygulama standart Python kütüphaneleriyle çalışır.
+- Harici bağımlılık gerektirmez.
+- İleride daha güçlü otomasyon ve oturum yönetimi eklenebilir.
+
 ## Özellikler
 
 - MEB öğrenci notları sorgusu
