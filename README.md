@@ -53,7 +53,7 @@ Eğer projeyi GitHub'dan indirdiyseniz, Termux'ta şu şekilde kurabilirsiniz:
 pkg update && pkg upgrade
 pkg install git python
 cd ~
-git clone https://github.com/<kullanici-adiniz>/NexPanel.git
+git clone https://github.com/ginbesse/NexPanel.git
 cd NexPanel
 python3 app.py
 ```
